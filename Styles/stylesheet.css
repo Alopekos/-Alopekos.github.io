@@ -47,7 +47,7 @@ body {
 .title-container {
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: center;
   margin-bottom: 4svh;
 }
 
@@ -577,7 +577,6 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .presentation {
   position: relative;
-  width: 100%;
   top: -1vw;
   margin-top: 5vh;
   margin-bottom: 60vw;
@@ -746,11 +745,6 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 /* ------------- about -------------- */
 
-h1 {
-  margin-bottom: 6svh;
-  width: 50%;
-}
-
 #about {
   margin: auto 0 60svh 0;
   position: relative;
@@ -813,7 +807,6 @@ h1 {
 
 .sub-title {
   font-size: 50px;
-  margin: auto;
   font-family: "Pixelify Sans", sans-serif;
   color: #ddca7d;
   letter-spacing: 0.1em;
@@ -1257,11 +1250,6 @@ nav .menuicon {
     margin-bottom: 700px;
   }
 
-  h1 {
-    width: 100%;
-    margin-bottom: 120px;
-    text-align: center;
-  }
   .center {
     margin: auto;
   }
@@ -1294,7 +1282,6 @@ nav .menuicon {
 
   .sub-title {
     font-size: 30px;
-    text-align: left;
   }
 
   .wasdAnim {

@@ -811,12 +811,11 @@ nav ul li:nth-child(9).active ~ .indicator {
   color: #ddca7d;
   letter-spacing: 0.1em;
 }
-#experience ul li  {
-  width: 50svw;
-}
+
 .tab-titles {
   display: flex;
-  margin-top: 9svh;
+  justify-content: space-evenly;
+  margin: 9svh 0;
 }
 
 .tab-links {
@@ -844,7 +843,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .tab-contents ul li {
   list-style: none;
-  width: 100%;
+  width: 50svw;
   padding:  2svh 0;
   font-family: "Inconsolata", sans-serif;
 }

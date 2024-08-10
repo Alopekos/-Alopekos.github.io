@@ -813,23 +813,23 @@ h1 {
 
 .sub-title {
   font-size: 50px;
-  margin: auto 0;
+  margin: auto;
   font-family: "Pixelify Sans", sans-serif;
   color: #ddca7d;
   letter-spacing: 0.1em;
 }
-
+#experience ul li  {
+  width: 50svw;
+}
 .tab-titles {
   display: flex;
-  margin: 40px 0 40px;
+  margin-top: 9svh;
 }
 
 .tab-links {
-  margin-right: 50px;
   font-size: 18px;
   font-family: "Pixelify Sans", sans-serif;
   color: #ddca7d;
-  letter-spacing: 0.1em;
   cursor: pointer;
   position: relative;
 }
@@ -851,7 +851,8 @@ h1 {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 2svh 0;
+  width: 100%;
+  padding:  2svh 0;
   font-family: "Inconsolata", sans-serif;
 }
 
@@ -862,9 +863,10 @@ h1 {
 
 .tab-contents {
   opacity: 0;
+  display: flex;
   position: absolute;
   transition: 0.2s;
-  margin: 0 5svh;
+  text-wrap: wrap;
 }
 
 .tab-contents.active-tab {
@@ -1164,6 +1166,10 @@ nav .menuicon {
     position: relative;
   }
 
+  .container {
+  padding: 0 15%;
+}
+
   #toggle {
     right: 0svh;
     width: 7svh;
@@ -1327,9 +1333,10 @@ nav .menuicon {
   }
 
   .tab-links {
-    font-size: 16px;
+    font-size: 3svw;
     margin-right: 20px;
   }
+  
 
   .row {
     margin-bottom: 100px;

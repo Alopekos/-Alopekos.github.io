@@ -1,9 +1,11 @@
-//onload navBar
-setTimeout(() => {
-  navBar.style.transform = "translateX(0)";
-}, 2000).onload;
-
 //Close NavBar
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    navBar.style.transform = "translateX(0%)";
+  }, 2000);
+});
+
 function navClose() {
   setTimeout(() => {
     navBar.style.transform = "translateX(-120%)";
@@ -14,26 +16,78 @@ function navCloseInstant() {
   navBar.style.transform = "translateX(-120%)";
 }
 
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    navCloseInstant();
+  }
+});
+//background img
+const foreground = document.getElementById("foreground-img");
+const setBackground = () => {
+  const currentTime = new Date();
+  const month = currentTime.getMonth() + 1;
+  let totalMonth = month;
+
+  if (totalMonth >= 3 && totalMonth <= 5) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Spring.png')";
+    setTimeout(() => {
+      foreground.src = "/Images/Foreground-Spring.png";
+    }, 500);
+    return;
+  } else if (totalMonth >= 6 && totalMonth <= 8) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Summer.png')";
+    setTimeout(() => {
+      foreground.src = "/Images/Foreground-Summer.png";
+    }, 500);
+    return;
+  } else if (totalMonth >= 9 && totalMonth <= 11) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Fall.png')";
+    setTimeout(() => {
+      foreground.src = "/Images/Foreground-Fall.png";
+    }, 500);
+    return;
+  } else if (totalMonth == 12 || totalMonth == 1 || totalMonth == 2) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Winter.png')";
+    setTimeout(() => {
+      foreground.src = "/Images/Foreground-Winter.png";
+    }, 500);
+    return;
+  } else {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Winter.png')";
+    setTimeout(() => {
+      foreground.src = "/Images/Foreground-Winter.png";
+    }, 500);
+    return;
+  }
+};
+
+setBackground();
+
 //game
 let gameHasStarted = false;
 const sleepyFox = document.querySelector(".sleepyFox");
 const presentation = document.querySelector(".presentation");
+const wasd = document.querySelector(".wasdAnim");
 
 window.addEventListener(
   "keyup",
   (gameEvent) => {
     if (
       gameHasStarted == false &&
-      ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(
-        gameEvent.code
-      ) > -1
+      ["KeyW", "KeyA", "KeyS", "KeyD"].indexOf(gameEvent.code) > -1
     ) {
       animate();
       navBar.style.transform = "translateX(-120%)";
       sleepyFox.style.display = "none";
-      presentation.style.transform = "translateY(-120px)";
+      wasd.style.display = "none";
+      presentation.style.transform = "translateY(-320px)";
       gameHasStarted = true;
-      return gameHasStarted;
+      return;
     }
   },
   false
@@ -99,6 +153,49 @@ function closemenu() {
   document.querySelector("html").style.overflowY = "auto";
 }
 
+//change season buttons
+
+const springBtn = document.querySelector(".spring-btn");
+const summerBtn = document.querySelector(".summer-btn");
+const fallBtn = document.querySelector(".fall-btn");
+const winterBtn = document.querySelector(".winter-btn");
+
+springBtn.addEventListener("click", () => {
+  foreground.src = "";
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Spring.png')";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Spring.png";
+  }, 500);
+});
+
+summerBtn.addEventListener("click", () => {
+  foreground.src = "";
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Summer.png')";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Summer.png";
+  }, 500);
+});
+
+fallBtn.addEventListener("click", () => {
+  foreground.src = "";
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Fall.png')";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Fall.png";
+  }, 500);
+});
+
+winterBtn.addEventListener("click", () => {
+  foreground.src = "";
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Winter.png')";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Winter.png";
+  }, 500);
+});
+
 //about me interactions
 const tablinks = document.getElementsByClassName("tab-links");
 const tabcontents = document.getElementsByClassName("tab-contents");
@@ -113,6 +210,16 @@ function openTab(tabname) {
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
+
+//notAssigned alert
+const noLinkElements = document.querySelectorAll(".notAssigned");
+
+noLinkElements.forEach((link) => {
+  link.addEventListener("click", () => {
+    alert("Cette partie du site n'est pas encore finie.");
+    return;
+  });
+});
 
 //submit a message
 const scriptURL =

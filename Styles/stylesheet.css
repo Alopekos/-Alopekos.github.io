@@ -243,13 +243,13 @@ nav ul li:nth-child(9).active ~ .indicator {
 }
 
 #toggle {
-  position: absolute;
+  position: fixed;
   width: 10svh;
   height: 5svh;
   border-radius: 10svh;
   vertical-align: center;
   background: linear-gradient(#fff, #b4aaaa);
-  right: 4svw;
+  right: 4px;
   top: 3svh;
   z-index: 5;
   transition: 0.5s;
@@ -286,6 +286,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 }
 
 #toggle .language-container {
+  position: static;
   display: flex;
   align-items: center;
   height: 100%;
@@ -1163,6 +1164,26 @@ nav .menuicon {
     position: relative;
   }
 
+  #toggle {
+    right: 0svh;
+    width: 7svh;
+    height: 3.5svh;
+  }
+ #toggle .toggle-indicator {
+  height: 3.5svh;
+  width: 3.5svh;
+ }
+
+ #toggle.active .toggle-indicator {
+  left: 3.5svh;
+ }
+
+ .page-icon {
+  height: 50px;
+ }
+
+
+
   .foregroundImg img {
     display: none;
   }
@@ -1172,20 +1193,22 @@ nav .menuicon {
     width: 5svh;
   }
   .navbar {
-    height: 40svh;
+    height: 10svh;
     width: 17svh;
     justify-content: right;
-    grid-gap: 0svh;
     border: 0.8svh solid #241407;
     border-radius: 2svh;
-    top: 30svh;
+    top: 40svh;
     left: -10.7svh;
-    padding-top: 1svh;
     padding-right: 0.5svh;
     transition: 1s;
   }
 
   #menu {
+    display: none;
+  }
+
+  .cross-container {
     display: none;
   }
 
@@ -1201,6 +1224,7 @@ nav .menuicon {
   .openmenu {
     position: relative;
     display: flex;
+    justify-content: center;
     background-image: url(/Images/NavLiBackground.png);
     background-size: contain;
     box-shadow: inset 0px 0px 0px 0.5svh #9a672b;
@@ -1263,7 +1287,7 @@ nav .menuicon {
   }
 
   .sub-title {
-    font-size: 40px;
+    font-size: 30px;
     text-align: left;
   }
 

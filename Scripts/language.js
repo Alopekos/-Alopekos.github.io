@@ -32,14 +32,13 @@ toggle.addEventListener("click", () => {
     toggle.classList.add("active");
     toEnglish();
 
+    const root = document.querySelector(":root");
 
-    const root = document.querySelector(':root');
-
-    root.style.setProperty('--myname', `"Rémi !`);
-    root.style.setProperty('--pxlartist', `'a pixel artist'`);
-    root.style.setProperty('--foxenjoyer', `'a fox enthusiast'`);
-    root.style.setProperty('--webdesign', `'a web designer'`);
-    root.style.setProperty('--webdev', `'a web developer'`);
+    root.style.setProperty("--myname", `"Rémi !`);
+    root.style.setProperty("--pxlartist", `'a pixel artist'`);
+    root.style.setProperty("--foxenjoyer", `'a fox enthusiast'`);
+    root.style.setProperty("--webdesign", `'a web designer'`);
+    root.style.setProperty("--webdev", `'a web developer'`);
   } else {
     language = "FR";
     toggle.classList.remove("active");
@@ -47,13 +46,13 @@ toggle.addEventListener("click", () => {
     english.style.opacity = "0";
     toFrench();
 
-    const root = document.querySelector(':root');
+    const root = document.querySelector(":root");
 
-    root.style.setProperty('--myname', `"Rémi !`);
-    root.style.setProperty('--pxlartist', `'pixel artist'`);
-    root.style.setProperty('--foxenjoyer', `'amateur de renards'`);
-    root.style.setProperty('--webdesign', `'web designer'`);
-    root.style.setProperty('--webdev', `'développeur web'`);
+    root.style.setProperty("--myname", `"Rémi !`);
+    root.style.setProperty("--pxlartist", `'pixel artist'`);
+    root.style.setProperty("--foxenjoyer", `'amateur de renards'`);
+    root.style.setProperty("--webdesign", `'web designer'`);
+    root.style.setProperty("--webdev", `'développeur web'`);
   }
 });
 
@@ -82,20 +81,23 @@ const toEnglish = () => {
   skillHTML.innerHTML = `
               <ul>
                 <li>
-                  <span>UI/UX</span><br />Interface design for Web applications
+                  <span>UI/UX</span><br />Interface design for Web or software applications
                 </li>
                 <li>
-                  <span>Web developpement</span><br />Website and web application development
+                  <span>App developpement</span><br />Working as a team to build applications
                 </li>
                 <li>
                   <span>Softwares and technologies used</span><br />HTML, CSS,
-                  JavaScript, Photoshop, Git, GitHub, Visual Studio
+                  JavaScript, Photoshop, Git, GitHub, Java, JavaScript, PHP, Bootstrap, Laravel, Agile
                 </li>
               </ul>`;
   experienceHTML.innerHTML = `
               <ul>
                 <li>
-                  <span>2023 - present</span><br />Self-taught programmer
+                  <span>2024 - 2026</span><br />Trainee at Le Campus Numérique Grenoble as a application developper
+                </li>
+                <li>
+                  <span>2023 - 2024</span><br />Self-taught programmer
                 </li>
                 <li>
                   <span>2022 - 2023</span><br />English teacher at "Abaque", Grenoble

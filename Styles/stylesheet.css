@@ -6,11 +6,11 @@
 #633e19
 */
 :root {
-  --name:"Rémi !";
-  --webdev:"développeur";
-  --pxlartist:"pixel artist";
-  --webdesign:"web designer";
-  --foxenjoyer:"amateur de renards";
+  --name: "Rémi !";
+  --webdev: "développeur";
+  --pxlartist: "pixel artist";
+  --webdesign: "web designer";
+  --foxenjoyer: "amateur de renards";
 }
 
 * {
@@ -844,7 +844,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 .tab-contents ul li {
   list-style: none;
   width: 50svw;
-  padding:  2svh 0;
+  padding: 2svh 0;
   font-family: "Inconsolata", sans-serif;
 }
 
@@ -871,9 +871,6 @@ nav ul li:nth-child(9).active ~ .indicator {
   padding-top: 30svh;
   margin-bottom: 10svh;
   padding-bottom: 60svh;
-  background-image: url("/Images/ServicesBckgr.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .services-list {
@@ -923,9 +920,8 @@ nav ul li:nth-child(9).active ~ .indicator {
 /* ------------- portfolio -------------- */
 
 #portfolio {
-  padding-bottom: 9svh;
-  margin-bottom: 20svh;
-  padding-top: 3svh;
+  padding: 15svh 0;
+  background: linear-gradient(#090b0f, #19293e, #19293e, #090b0f);
 }
 
 .work-list {
@@ -1159,28 +1155,26 @@ nav .menuicon {
   }
 
   .container {
-  padding: 0 15%;
-}
+    padding: 0 15%;
+  }
 
   #toggle {
     right: 0svh;
     width: 7svh;
     height: 3.5svh;
   }
- #toggle .toggle-indicator {
-  height: 3.5svh;
-  width: 3.5svh;
- }
+  #toggle .toggle-indicator {
+    height: 3.5svh;
+    width: 3.5svh;
+  }
 
- #toggle.active .toggle-indicator {
-  left: 3.5svh;
- }
+  #toggle.active .toggle-indicator {
+    left: 3.5svh;
+  }
 
- .page-icon {
-  height: 50px;
- }
-
-
+  .page-icon {
+    height: 50px;
+  }
 
   .foregroundImg img {
     display: none;
@@ -1322,7 +1316,6 @@ nav .menuicon {
     font-size: 3svw;
     margin-right: 20px;
   }
-  
 
   .row {
     margin-bottom: 100px;

@@ -198,6 +198,26 @@ window.addEventListener("keydown", (event) => {
       break;
     case "ArrowDown":
       keys.ArrowDown.pressed = true;
+      break;
+  }
+  switch (event.code) {
+    case "KeyD":
+      keys.ArrowRight.pressed = true;
+      keys.ArrowDown.pressed = false;
+      break;
+    case "KeyA":
+      keys.ArrowLeft.pressed = true;
+      keys.ArrowDown.pressed = false;
+      break;
+    case "KeyW":
+      if (player.velocity.y === 0) {
+        player.velocity.y = -7.3;
+        keys.ArrowDown.pressed = false;
+      }
+      break;
+    case "KeyS":
+      keys.ArrowDown.pressed = true;
+      break;
   }
 });
 
@@ -207,6 +227,14 @@ window.addEventListener("keyup", (event) => {
       keys.ArrowRight.pressed = false;
       break;
     case "ArrowLeft":
+      keys.ArrowLeft.pressed = false;
+      break;
+  }
+  switch (event.code) {
+    case "KeyD":
+      keys.ArrowRight.pressed = false;
+      break;
+    case "KeyA":
       keys.ArrowLeft.pressed = false;
       break;
   }

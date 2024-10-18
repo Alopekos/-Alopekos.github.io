@@ -7,9 +7,9 @@
 */
 :root {
   --name: "Rémi !";
-  --webdev: "développeur";
+  --dev: "développeur";
   --pxlartist: "pixel artist";
-  --webdesign: "web designer";
+  --design: "concepteur appli";
   --foxenjoyer: "amateur de renards";
 }
 
@@ -102,7 +102,7 @@ body {
   box-shadow: inset 0px 0px 0px 4px #9a672b;
   border-radius: 50%;
   border: 0.7svh solid #613514;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 #menu {
@@ -138,12 +138,13 @@ nav ul li a {
 .navIcon {
   color: #382b1e;
   height: 7svh;
+  transition: 1s;
 }
 
 nav ul li a .icon {
   font-size: 5svh;
   height: 5svh;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 nav ul li.active a .navIcon {
@@ -169,7 +170,7 @@ hr {
   height: 9svh;
   background: #9a672b;
   border-radius: 3.2svh;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 nav ul li:nth-child(1).active ~ .indicator {
@@ -646,7 +647,7 @@ nav ul li:nth-child(9).active ~ .indicator {
   }
   21%,
   40% {
-    content: var(--webdev);
+    content: var(--dev);
   }
   41%,
   60% {
@@ -654,7 +655,7 @@ nav ul li:nth-child(9).active ~ .indicator {
   }
   61%,
   80% {
-    content: var(--webdesign);
+    content: var(--design);
   }
   81%,
   100% {
@@ -939,9 +940,11 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .work img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
   opacity: 0.7;
-  transition: tranforms 1s;
+  transition: 0.5s;
 }
 
 .layer {
@@ -998,6 +1001,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .work:hover img {
   transform: scale(1.1);
+  transition: 2s;
 }
 
 .work:hover .layer {

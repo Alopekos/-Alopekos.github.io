@@ -21,6 +21,10 @@ const servicesTxt = document.getElementById("services-txt");
 const serviceList = document.getElementById("service-list");
 const projectTxt = document.getElementById("project-txt");
 const portefolioProjetTxt = document.getElementById("portefolio-projet-txt");
+const portefolioDnDGameTitle = document.getElementById("dnd-title");
+const rpgMapTitle = document.getElementById("rpg-map-title");
+const rpgMapTxt = document.getElementById("rpg-map-txt");
+const portefolioDnDGame = document.getElementById("dnd-project-txt");
 const seeMoreTxt = document.getElementById("see-more-txt");
 const emailTxt = document.getElementById("email-txt");
 
@@ -37,8 +41,8 @@ toggle.addEventListener("click", () => {
     root.style.setProperty("--myname", `"Rémi !`);
     root.style.setProperty("--pxlartist", `'a pixel artist'`);
     root.style.setProperty("--foxenjoyer", `'a fox enthusiast'`);
-    root.style.setProperty("--webdesign", `'a web designer'`);
-    root.style.setProperty("--webdev", `'a web developer'`);
+    root.style.setProperty("--design", `'an app designer'`);
+    root.style.setProperty("--dev", `'an app developer'`);
   } else {
     language = "FR";
     toggle.classList.remove("active");
@@ -51,8 +55,8 @@ toggle.addEventListener("click", () => {
     root.style.setProperty("--myname", `"Rémi !`);
     root.style.setProperty("--pxlartist", `'pixel artist'`);
     root.style.setProperty("--foxenjoyer", `'amateur de renards'`);
-    root.style.setProperty("--webdesign", `'web designer'`);
-    root.style.setProperty("--webdev", `'développeur web'`);
+    root.style.setProperty("--design", `'concepteur appli'`);
+    root.style.setProperty("--dev", `'développeur'`);
   }
 });
 
@@ -66,9 +70,8 @@ const toEnglish = () => {
   presentationTitle.innerText = "About me";
   aboutTxt.innerHTML = `
               <p>
-                Hi, my name is Rémi Legrand. <br />
-                I'm an aspiring front-end web developer and UX/UI designer.
-                As a programmer, my passion is creating original and responsive user interfaces.  
+                Hello, my name is Rémi Legrand. <br />
+               I'm an application designer and developer. As a programmer, my passion is creating original and responsive user interfaces.
               </p>
               <p>
                 Passionate about pixel art and programming, I'm always
@@ -87,8 +90,8 @@ const toEnglish = () => {
                   <span>App developpement</span><br />Working as a team to build applications
                 </li>
                 <li>
-                  <span>Softwares and technologies used</span><br />HTML, CSS,
-                  JavaScript, Photoshop, Git, GitHub, Java, JavaScript, PHP, Bootstrap, Laravel, Agile
+                  <span>Softwares and technologies used</span><br />
+                  JavaScript, Photoshop, Git, GitHub, Java, Spring, JavaScript, Vue3, PHP, Bootstrap, Laravel, Agile
                 </li>
               </ul>`;
   experienceHTML.innerHTML = `
@@ -135,6 +138,10 @@ const toEnglish = () => {
   `;
   projectTxt.innerText = "My Projects";
   portefolioProjetTxt.innerHTML = `My first project. A personal portfolio with a design that changes with the seasons.<br/> GitHub repository:`;
+  portefolioDnDGameTitle.innerHTML = `Java D&D Game`;
+  portefolioDnDGame.innerHTML = `Dungeons & Dragons type game made at Campus Numérique as part of my training.<br/>Github repository:`;
+  rpgMapTitle.innerHTML = `RPG Map Vue3`;
+  rpgMapTxt.innerHTML = `A small personal project in Vue.js to help the trainees at the Campus Numérique find their way around the dungeon rooms of our role-playing game.<br/> Website :`;
   seeMoreTxt.innerText = "See more";
   emailTxt.innerHTML = `
                 Or send me an email:&nbsp;&nbsp;&nbsp;remi_legrand@icloud.com 
@@ -155,15 +162,11 @@ const toFrench = () => {
   presentationTitle.innerText = "Présentation";
   aboutTxt.innerHTML = `
               <p>
-                Bonjour, je m'appelle Rémi Legrand. <br />
-                Je suis un aspirant développeur web front-end et designer UX/UI.
-                En tant que programmeur, ma passion est de créer des interfaces
-                utilisateur originales et réactives.
+                Bonjour, je m'appelle Rémi Legrand.  <br />
+               Je suis un concepteur développeur d'application. En tant que programmeur, ma passion est de créer des interfaces utilisateur originales et réactives. 
               </p>
               <p>
-                Passionné de pixel art et de programmation, je suis toujours
-                curieux d'en apprendre plus sur les nouvelles technologies et le
-                codage innovant.
+Passionné de pixel art et de programmation, je suis toujours curieux d'en apprendre plus sur les nouvelles technologies et le codage innovant. 
               </p>
               <p>Entrons en contact !</p>`;
   skillsTxt.innerText = "Compétences";
@@ -176,18 +179,21 @@ const toFrench = () => {
                   Web
                 </li>
                 <li>
-                  <span>Web developpement</span><br />Développement
+                  <span>Développeur applications</span><br />Développement
                   d'applications web.
                 </li>
                 <li>
-                  <span>Logiciels et technologies</span><br />HTML, CSS,
-                  JavaScript, Photoshop, Git, GitHub, Visual Studio
+                  <span>Logiciels et technologies</span><br />
+                  JavaScript, Photoshop, Git, GitHub, Java, Spring, JavaScript, Vue3, PHP, Bootstrap, Laravel, Agile
                 </li>
               </ul>`;
   experienceHTML.innerHTML = `
-              <ul>
+               <ul>
                 <li>
-                  <span>2023 - en cours</span><br />Programmeur autodidacte
+                  <span>2024 - 2026</span><br />En formation concepteur développeur application au Campus Numérique, Grenoble
+                </li>
+                <li>
+                  <span>2023 - 2024</span><br />Programmeur autodidacte
                 </li>
                 <li>
                   <span>2022 - 2023</span><br />Professeur d'anglais à "Abaque",
@@ -195,25 +201,25 @@ const toFrench = () => {
                 </li>
                 <li>
                   <span>2014</span><br />Stage d'observation en conception web
-                  design/web development à "La Haute Société", Grenoble.
+                  design/web development à "La Haute Société", Grenoble
                 </li>
               </ul>`;
   educationHTML.innerHTML = `
               <ul>
                 <li>
                   <span>2022</span><br />Master en littérature anglaise (LLCER)
-                  à l'Université Grenoble Alpes.
+                  à l'Université Grenoble Alpes
                 </li>
                 <li>
                   <span>2020</span><br />Licence en Langues Etrangères
-                  Appliquées (LEA) à l'Université Grenoble Alpes.
+                  Appliquées (LEA) à l'Université Grenoble Alpes
                 </li>
               </ul>`;
   servicesTxt.innerText = "Mes services";
   serviceList.innerHTML = `
-          <div>
-            <h2>Web Dev</h2>
-            <p>Construction de sites internets. HTML, CSS, Javascript, Git. Frameworks : Angular (en cours d'apprentissage).</p>
+   <div>
+            <h2>Developpeur applications</h2>
+            <p>Java, Javascript, PHP, Git, Linux. Frameworks : Bootstrap, Laravel, Vue3, Spring.</p>
             <a class="notAssigned">En savoir plus</a>
           </div>
           <div>
@@ -228,6 +234,10 @@ const toFrench = () => {
           </div>`;
   projectTxt.innerText = "Mes Projets";
   portefolioProjetTxt.innerHTML = `Mon premier projet. Un portefolio personnel changeant avec les saisons.<br/> Répositoire GitHub:`;
+  portefolioDnDGameTitle.innerHTML = `Jeu D&D en Java`;
+  portefolioDnDGame.innerHTML = `Jeu type Donjon & Dragons réalisé au Campus Numérique dans le cadre de ma formation.<br/>Répositoire GitHub:`;
+  rpgMapTitle.innerHTML = `Carte JDR Vue3`;
+  rpgMapTxt.innerHTML = `Un petit projet personnel en Vue.js pour aider la promotion au campus numérique à s'orienter dans les salles du donjon de notre jeu de rôle.<br/>Le site :`;
   seeMoreTxt.innerText = "Voir plus";
   emailTxt.innerHTML = `
                 Ou bien envoyez moi un email:&nbsp;&nbsp;&nbsp;remi_legrand@icloud.com 

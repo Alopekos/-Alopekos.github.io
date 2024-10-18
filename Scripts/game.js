@@ -2,7 +2,9 @@ window.addEventListener(
   "keydown",
   function (e) {
     if (
-      ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1
+      ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space"].indexOf(
+        e.code
+      ) > -1
     ) {
       e.preventDefault();
     }

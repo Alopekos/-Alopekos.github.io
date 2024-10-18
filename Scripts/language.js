@@ -27,6 +27,8 @@ const rpgMapTxt = document.getElementById("rpg-map-txt");
 const portefolioDnDGame = document.getElementById("dnd-project-txt");
 const seeMoreTxt = document.getElementById("see-more-txt");
 const emailTxt = document.getElementById("email-txt");
+const signature = document.getElementById("signature-title");
+const signatureTxt = document.getElementById("signature-txt");
 
 toggle.addEventListener("click", () => {
   if (language === "FR") {
@@ -142,6 +144,8 @@ const toEnglish = () => {
   portefolioDnDGame.innerHTML = `Dungeons & Dragons type game made at Campus Numérique as part of my training.<br/>Github repository:`;
   rpgMapTitle.innerHTML = `RPG Map Vue3`;
   rpgMapTxt.innerHTML = `A small personal project in Vue.js to help the trainees at the Campus Numérique find their way around the dungeon rooms of our role-playing game.<br/> Website :`;
+  signature.innerHTML = `Signatures & Breaktimes`;
+  signatureTxt.innerHTML = `A two-person project in C with a colleague at le Campus Numérique. All you have to do is launch it in the morning and it tells you if you've signed. You have to fill in the signature in the morning and again in the afternoon. It also warns if it's break time and lets you shut down the PC at the end of the day. <br/> GitHub repository:`;
   seeMoreTxt.innerText = "See more";
   emailTxt.innerHTML = `
                 Or send me an email:&nbsp;&nbsp;&nbsp;remi_legrand@icloud.com 
@@ -238,6 +242,8 @@ Passionné de pixel art et de programmation, je suis toujours curieux d'en appre
   portefolioDnDGame.innerHTML = `Jeu type Donjon & Dragons réalisé au Campus Numérique dans le cadre de ma formation.<br/>Répositoire GitHub:`;
   rpgMapTitle.innerHTML = `Carte JDR Vue3`;
   rpgMapTxt.innerHTML = `Un petit projet personnel en Vue.js pour aider la promotion au campus numérique à s'orienter dans les salles du donjon de notre jeu de rôle.<br/>Le site :`;
+  signature.innerHTML = `Signatures et Pauses`;
+  signatureTxt.innerHTML = `Un projet à deux en C avec un collègue au Campus Numérique. Il suffit de le lancer le matin et il dit si on a signé. Signature que l'on doit remplir matin et arpès-midi en formation. Il prévient aussi si c'est la pause et permet d'éteindre le PC en fin de journée.<br/>Répositoire GitHub :`;
   seeMoreTxt.innerText = "Voir plus";
   emailTxt.innerHTML = `
                 Ou bien envoyez moi un email:&nbsp;&nbsp;&nbsp;remi_legrand@icloud.com 
